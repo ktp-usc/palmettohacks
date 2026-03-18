@@ -16,7 +16,7 @@ export default function HeroSection() {
       {/* Blue glow orbs */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 h-[700px] w-[1000px] rounded-full"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 h-[60vw] w-[90vw] max-h-[700px] max-w-[1000px] rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(96,165,250,0.12) 0%, transparent 65%)",
@@ -25,7 +25,7 @@ export default function HeroSection() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute left-[20%] top-[30%] z-0 h-[400px] w-[400px] rounded-full"
+        className="pointer-events-none absolute left-[10%] top-[20%] z-0 h-[40vw] w-[40vw] max-h-[400px] max-w-[400px] rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(139,92,246,0.10) 0%, transparent 70%)",
@@ -34,7 +34,7 @@ export default function HeroSection() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute right-[15%] top-[40%] z-0 h-[350px] w-[350px] rounded-full"
+        className="pointer-events-none absolute right-[10%] top-[40%] z-0 h-[35vw] w-[35vw] max-h-[350px] max-w-[350px] rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(56,189,248,0.08) 0%, transparent 70%)",
@@ -44,13 +44,13 @@ export default function HeroSection() {
 
       <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
         {/* Hosted-by badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/70 backdrop-blur">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs sm:text-sm text-white/70 backdrop-blur text-center">
           <span className="inline-block h-2 w-2 rounded-full bg-[#60a5fa] animate-pulse" />
           Hosted by Kappa Theta Pi
         </div>
 
         {/* Title */}
-        <h1 className="text-6xl font-extrabold tracking-tight text-white sm:text-7xl md:text-8xl">
+        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-8xl">
           Palmetto
           <span className="text-[#60a5fa]">Hacks</span>
         </h1>
@@ -98,13 +98,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 flex flex-col items-center gap-1 text-white/30 text-xs">
-        <span>Scroll</span>
-        <svg className="h-4 w-4 animate-bounce" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
 
       <style>{`
         .hero-bg-anim {
