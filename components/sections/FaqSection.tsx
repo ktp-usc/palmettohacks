@@ -1,0 +1,103 @@
+"use client";
+
+import { useState } from "react";
+
+const faqs = [
+  {
+    q: "Who can participate in PalmettoHacks?",
+    a: "PalmettoHacks is open to all currently enrolled university and college students. Whether you're a freshman or a graduate student, all skill levels and majors are welcome. You don't need to be a computer science major to participate!",
+  },
+  {
+    q: "Is there a registration fee?",
+    a: "No — PalmettoHacks is completely free to attend. We cover meals, snacks, and swag for all registered participants. Just bring your laptop and your ideas!",
+  },
+  {
+    q: "Do I need a team to register?",
+    a: "You can register as an individual or as part of a team. Teams can have up to 4 members. If you don't have a team yet, don't worry — we'll host a team formation event at the start of the hackathon so you can find collaborators.",
+  },
+  {
+    q: "What should I bring?",
+    a: "Bring your laptop, charger, and any hardware you want to hack with. We'll provide meals, snacks, Wi-Fi, and a comfortable hacking environment. Sleeping bags are optional but welcome for those pulling all-nighters!",
+  },
+  {
+    q: "What kind of projects can I build?",
+    a: "You can build anything — web apps, mobile apps, hardware projects, AI/ML models, games, and more. There are no topic restrictions. We'll share optional challenge tracks from our sponsors Microsoft and Capgemini with special prizes for top entries.",
+  },
+  {
+    q: "Will there be mentors available?",
+    a: "Yes! We'll have mentors from Microsoft, Capgemini, and KTP on-site throughout the hackathon to help with technical challenges, ideation, and project scoping.",
+  },
+  {
+    q: "How will projects be judged?",
+    a: "Projects are evaluated on innovation, technical complexity, design, and real-world impact. Each team will give a live demo to a panel of judges from our sponsor companies and KTP leadership.",
+  },
+  {
+    q: "What are the prizes?",
+    a: "We'll have prizes for the overall top teams as well as sponsor-specific challenge track winners. Prize details will be announced closer to the event. Past prizes have included cash awards, tech gear, and internship fast-tracks.",
+  },
+];
+
+export default function FaqSection() {
+  const [open, setOpen] = useState<number | null>(null);
+
+  return (
+    <section id="faq" className="bg-[#080808] py-24 px-4">
+      <div className="mx-auto max-w-3xl">
+        {/* Heading */}
+        <div className="flex flex-col items-center gap-4 text-center mb-16">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#4ade80]/20 bg-[#4ade80]/10 px-4 py-1.5 text-sm text-[#4ade80]">
+            FAQ
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            Common{" "}
+            <span className="text-[#4ade80]">Questions</span>
+          </h2>
+          <p className="max-w-xl text-white/60">
+            Everything you need to know about PalmettoHacks. If you have a
+            question that isn&apos;t answered here, feel free to reach out!
+          </p>
+        </div>
+
+        {/* Accordion */}
+        <div className="flex flex-col gap-3">
+          {faqs.map((faq, i) => (
+            <div
+              key={i}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden"
+            >
+              <button
+                onClick={() => setOpen(open === i ? null : i)}
+                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-white hover:bg-white/[0.03] transition"
+                aria-expanded={open === i}
+              >
+                <span className="font-medium">{faq.q}</span>
+                <svg
+                  className={`h-5 w-5 shrink-0 text-[#4ade80] transition-transform duration-200 ${open === i ? "rotate-45" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              {open === i && (
+                <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">
+                  {faq.a}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Contact CTA */}
+        <div className="mt-12 text-center text-white/50 text-sm">
+          Still have questions?{" "}
+          <a href="mailto:ktp@usc.edu" className="text-[#4ade80] hover:underline">
+            Contact us
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
