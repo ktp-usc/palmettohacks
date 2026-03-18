@@ -2,7 +2,7 @@ const collaborators = [
   {
     name: "Microsoft",
     description:
-      "PalmettoHacks is held in collaboration with Microsoft. Their engineers will be on-site as mentors, running workshops on cloud and AI technologies throughout the event.",
+      "PalmettoHacks is held in collaboration with Zach Oxendine of Microsoft. He has provided the vision and support to make this event possible, and will be on-site during the hackathon to mentor students and judge projects.",
     logo: (
       // eslint-disable-next-line @next/next/no-img-element
       <img src="/logos/microsoft.svg" alt="Microsoft" className="h-10 w-10" />

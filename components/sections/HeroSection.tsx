@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 text-center"
+      className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-16 text-center"
       style={{ background: "#05080f" }}
     >
       {/* Animated background */}
