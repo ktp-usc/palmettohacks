@@ -48,16 +48,20 @@ const sponsors = [
 
 export default function SponsorsSection() {
   return (
-    <section id="sponsors" className="bg-[#080808] py-24 px-4">
-      <div className="mx-auto max-w-5xl">
+    <section id="sponsors" className="relative overflow-hidden py-24 px-4" style={{ background: "#060810" }}>
+      {/* Background glow */}
+      <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[800px] rounded-full"
+        style={{ background: "radial-gradient(ellipse, rgba(96,165,250,0.05) 0%, transparent 70%)", filter: "blur(80px)" }} />
+
+      <div className="mx-auto max-w-5xl relative">
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#4ade80]/20 bg-[#4ade80]/10 px-4 py-1.5 text-sm text-[#4ade80]">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#60a5fa]/20 bg-[#60a5fa]/10 px-4 py-1.5 text-sm text-[#60a5fa]">
             Our Partners
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Backed by Industry{" "}
-            <span className="text-[#4ade80]">Leaders</span>
+            <span className="text-[#60a5fa]">Leaders</span>
           </h2>
           <p className="max-w-xl text-white/60">
             PalmettoHacks is made possible through the generous support of our
@@ -111,7 +115,7 @@ export default function SponsorsSection() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
                     {s.logo}
                   </div>
-                  <span className="rounded-full border border-[#4ade80]/40 bg-[#4ade80]/10 px-3 py-1 text-xs font-semibold text-[#4ade80]">
+                  <span className="rounded-full border border-[#60a5fa]/40 bg-[#60a5fa]/10 px-3 py-1 text-xs font-semibold text-[#60a5fa]">
                     Sponsor
                   </span>
                 </div>
@@ -133,7 +137,7 @@ export default function SponsorsSection() {
           </p>
           <a
             href="mailto:soktp@mailbox.sc.edu"
-            className="text-[#4ade80] text-sm font-medium hover:underline"
+            className="text-[#60a5fa] text-sm font-medium hover:underline"
           >
             Get in touch →
           </a>

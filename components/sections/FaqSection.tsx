@@ -41,16 +41,22 @@ export default function FaqSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-[#080808] py-24 px-4">
-      <div className="mx-auto max-w-3xl">
+    <section id="faq" className="relative overflow-hidden py-24 px-4" style={{ background: "#060810" }}>
+      {/* Background glow */}
+      <div aria-hidden className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 h-[400px] w-[700px] rounded-full"
+        style={{ background: "radial-gradient(ellipse at bottom, rgba(96,165,250,0.06) 0%, transparent 70%)", filter: "blur(70px)" }} />
+      <div aria-hidden className="pointer-events-none absolute left-[10%] top-[20%] h-[300px] w-[300px] rounded-full"
+        style={{ background: "radial-gradient(ellipse, rgba(139,92,246,0.05) 0%, transparent 70%)", filter: "blur(60px)" }} />
+
+      <div className="mx-auto max-w-3xl relative">
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center mb-16">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#4ade80]/20 bg-[#4ade80]/10 px-4 py-1.5 text-sm text-[#4ade80]">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#60a5fa]/20 bg-[#60a5fa]/10 px-4 py-1.5 text-sm text-[#60a5fa]">
             FAQ
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Common{" "}
-            <span className="text-[#4ade80]">Questions</span>
+            <span className="text-[#60a5fa]">Questions</span>
           </h2>
           <p className="max-w-xl text-white/60">
             Everything you need to know about PalmettoHacks. If you have a
@@ -72,7 +78,7 @@ export default function FaqSection() {
               >
                 <span className="font-medium">{faq.q}</span>
                 <svg
-                  className={`h-5 w-5 shrink-0 text-[#4ade80] transition-transform duration-200 ${open === i ? "rotate-45" : ""}`}
+                  className={`h-5 w-5 shrink-0 text-[#60a5fa] transition-transform duration-200 ${open === i ? "rotate-45" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={2}
@@ -93,7 +99,7 @@ export default function FaqSection() {
         {/* Contact CTA */}
         <div className="mt-12 text-center text-white/50 text-sm">
           Still have questions?{" "}
-          <a href="mailto:soktp@mailbox.sc.edu" className="text-[#4ade80] hover:underline">
+          <a href="mailto:soktp@mailbox.sc.edu" className="text-[#60a5fa] hover:underline">
             Contact us
           </a>
         </div>

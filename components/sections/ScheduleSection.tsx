@@ -14,9 +14,9 @@ const schedule: { time: string; title: string; description: string; type: "main"
 ];
 
 const typeColors: Record<string, string> = {
-  main: "bg-[#4ade80]/20 text-[#4ade80] border-[#4ade80]/30",
+  main: "bg-[#60a5fa]/20 text-[#60a5fa] border-[#60a5fa]/30",
   food: "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  workshop: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  workshop: "bg-violet-500/20 text-violet-400 border-violet-500/30",
   judging: "bg-purple-500/20 text-purple-400 border-purple-500/30",
 };
 
@@ -29,16 +29,22 @@ const typeLabels: Record<string, string> = {
 
 export default function ScheduleSection() {
   return (
-    <section id="schedule" className="bg-black py-24 px-4">
-      <div className="mx-auto max-w-4xl">
+    <section id="schedule" className="relative overflow-hidden py-24 px-4" style={{ background: "#07091a" }}>
+      {/* Background glows */}
+      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full"
+        style={{ background: "radial-gradient(ellipse at top right, rgba(96,165,250,0.06) 0%, transparent 65%)", filter: "blur(70px)" }} />
+      <div aria-hidden className="pointer-events-none absolute left-0 bottom-0 h-[400px] w-[400px] rounded-full"
+        style={{ background: "radial-gradient(ellipse at bottom left, rgba(139,92,246,0.05) 0%, transparent 65%)", filter: "blur(70px)" }} />
+
+      <div className="mx-auto max-w-4xl relative">
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center mb-16">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#4ade80]/20 bg-[#4ade80]/10 px-4 py-1.5 text-sm text-[#4ade80]">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#60a5fa]/20 bg-[#60a5fa]/10 px-4 py-1.5 text-sm text-[#60a5fa]">
             Schedule
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             12 Hours of{" "}
-            <span className="text-[#4ade80]">Innovation</span>
+            <span className="text-[#60a5fa]">Innovation</span>
           </h2>
           <p className="max-w-xl text-white/60">
             Saturday, April 11, 2026 · 9 AM – 9 PM. From the opening ceremony
