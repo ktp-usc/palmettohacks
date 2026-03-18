@@ -1,44 +1,44 @@
-const schedule: { time: string; title: string; description: string; type: "main" | "food" | "workshop" | "judging" }[] = [
-  { time: "9:00 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                        type: "main"     },
-  { time: "9:30 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry collaborators.",             type: "main"     },
-  { time: "10:00 AM", title: "Hacking Begins",            description: "Form your teams and start building!",                                            type: "main"     },
-  { time: "10:30 AM", title: "Workshop: Azure AI",        description: "Hands-on intro to Azure AI services with Microsoft engineers.",                   type: "workshop" },
-  { time: "12:00 PM", title: "Lunch",                     description: "Fuel up at the halfway point.",                                                   type: "food"     },
-  { time: "1:00 PM",  title: "Workshop: Agile in Practice", description: "How Capgemini teams ship great products fast.",                                 type: "workshop" },
-  { time: "2:30 PM",  title: "Mentorship Hours",          description: "Get 1-on-1 time with mentors from Microsoft and Capgemini.",                     type: "workshop" },
-  { time: "5:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                            type: "main"     },
-  { time: "5:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                             type: "judging"  },
-  { time: "7:30 PM",  title: "Dinner",                    description: "Celebrate your hard work over a meal before the awards.",                        type: "food"     },
-  { time: "8:00 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!",        type: "main"     },
-  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!",                                 type: "main"     },
+const schedule: { time: string; title: string; description: string; type: "main" | "food" | "judging" }[] = [
+  { time: "8:30 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                     type: "main"    },
+  { time: "9:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners.",              type: "main"    },
+  { time: "9:30 AM",  title: "Hacking Begins",            description: "Form your teams and start building!",                                        type: "main"    },
+  { time: "1:00 PM",  title: "Lunch",                     description: "Fuel up and keep building.",                                                 type: "food"    },
+  { time: "7:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                        type: "main"    },
+  { time: "7:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                         type: "judging" },
+  { time: "8:30 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!",   type: "main"    },
+  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!",                            type: "main"    },
 ];
 
 const typeColors: Record<string, string> = {
-  main: "bg-[#4ade80]/20 text-[#4ade80] border-[#4ade80]/30",
+  main: "bg-[#60a5fa]/20 text-[#60a5fa] border-[#60a5fa]/30",
   food: "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  workshop: "bg-blue-500/20 text-blue-400 border-blue-500/30",
   judging: "bg-purple-500/20 text-purple-400 border-purple-500/30",
 };
 
 const typeLabels: Record<string, string> = {
   main: "Event",
   food: "Food",
-  workshop: "Workshop",
   judging: "Judging",
 };
 
 export default function ScheduleSection() {
   return (
-    <section id="schedule" className="bg-black py-24 px-4">
-      <div className="mx-auto max-w-4xl">
+    <section id="schedule" className="relative overflow-hidden py-24 px-4" style={{ background: "#07091a" }}>
+      {/* Background glows */}
+      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full"
+        style={{ background: "radial-gradient(ellipse at top right, rgba(96,165,250,0.06) 0%, transparent 65%)", filter: "blur(70px)" }} />
+      <div aria-hidden className="pointer-events-none absolute left-0 bottom-0 h-[400px] w-[400px] rounded-full"
+        style={{ background: "radial-gradient(ellipse at bottom left, rgba(139,92,246,0.05) 0%, transparent 65%)", filter: "blur(70px)" }} />
+
+      <div className="mx-auto max-w-4xl relative">
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center mb-16">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#4ade80]/20 bg-[#4ade80]/10 px-4 py-1.5 text-sm text-[#4ade80]">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#60a5fa]/20 bg-[#60a5fa]/10 px-4 py-1.5 text-sm text-[#60a5fa]">
             Schedule
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             12 Hours of{" "}
-            <span className="text-[#4ade80]">Innovation</span>
+            <span className="text-[#60a5fa]">Innovation</span>
           </h2>
           <p className="max-w-xl text-white/60">
             Saturday, April 11, 2026 · 9 AM – 9 PM. From the opening ceremony

@@ -1,6 +1,6 @@
 const footerLinks = [
   { label: "About", href: "#about" },
-  { label: "Sponsors", href: "#sponsors" },
+  { label: "Partners", href: "#partners" },
   { label: "Schedule", href: "#schedule" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -28,17 +28,21 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-white/10 py-16 px-4">
-      <div className="mx-auto max-w-6xl">
+    <footer className="relative overflow-hidden border-t border-white/10 py-16 px-4" style={{ background: "#05080f" }}>
+      {/* Subtle glow */}
+      <div aria-hidden className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[300px] w-[600px] rounded-full"
+        style={{ background: "radial-gradient(ellipse at top, rgba(96,165,250,0.04) 0%, transparent 70%)", filter: "blur(60px)" }} />
+
+      <div className="mx-auto max-w-6xl relative">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             <span className="text-xl font-bold text-white">
-              <span className="text-[#4ade80]">Palmetto</span>Hacks
+              <span className="text-[#60a5fa]">Palmetto</span>Hacks
             </span>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-              A 12-hour hackathon hosted by Kappa Theta Pi in collaboration with
-              Microsoft and sponsored by Capgemini.
+              A 12-hour hackathon hosted by Kappa Theta Pi in partnership with
+              Microsoft and Capgemini.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((s) => (
@@ -48,7 +52,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={s.label}
-                  className="text-white/40 hover:text-[#4ade80] transition-colors"
+                  className="text-white/40 hover:text-[#60a5fa] transition-colors"
                 >
                   {s.icon}
                 </a>
@@ -97,7 +101,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
-          <span>© {new Date().getFullYear()} Kappa Theta Pi — USC Chapter. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Kappa Theta Pi - Alpha Theta Chapter. All rights reserved.</span>
           <span>Built with ♥ by KTP</span>
         </div>
       </div>

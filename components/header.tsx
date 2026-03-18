@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Sponsors", href: "#sponsors" },
+  { label: "Partners", href: "#partners" },
   { label: "Schedule", href: "#schedule" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -16,8 +16,8 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-md bg-black/60 border-b border-white/5">
       {/* Logo */}
-      <a href="#home" className="flex items-center gap-2 font-bold text-white text-lg">
-        <span className="text-[#4ade80]">Palmetto</span>Hacks
+      <a href="#" className="flex items-center gap-2 font-bold text-white text-lg">
+        <span className="text-[#60a5fa]">Palmetto</span>Hacks
       </a>
 
       {/* Desktop nav */}
@@ -35,12 +35,14 @@ export default function Header() {
 
       {/* CTA */}
       <div className="hidden md:flex">
-        <Button
-          size="sm"
-          className="bg-[#4ade80] text-black font-semibold hover:bg-[#22c55e]"
-        >
-          Register
-        </Button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsPjiRCXEiROLnWfj4i3hiMK-WSwEuUQ8ygVWz5QR2X1oXmw/viewform" target="_blank" rel="noreferrer">
+          <Button
+            size="sm"
+            className="bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6]"
+          >
+            Register
+          </Button>
+        </a>
       </div>
 
       {/* Mobile hamburger */}
@@ -71,12 +73,14 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <Button
-            size="sm"
-            className="w-fit bg-[#4ade80] text-black font-semibold hover:bg-[#22c55e]"
-          >
-            Register
-          </Button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsPjiRCXEiROLnWfj4i3hiMK-WSwEuUQ8ygVWz5QR2X1oXmw/viewform" target="_blank" rel="noreferrer">
+            <Button
+              size="sm"
+              className="w-fit bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6]"
+            >
+              Register
+            </Button>
+          </a>
         </div>
       )}
     </header>
