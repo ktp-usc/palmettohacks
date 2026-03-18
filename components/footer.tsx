@@ -1,6 +1,6 @@
 const footerLinks = [
   { label: "About", href: "#about" },
-  { label: "Sponsors", href: "#sponsors" },
+  { label: "Partners", href: "#partners" },
   { label: "Schedule", href: "#schedule" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -41,8 +41,8 @@ export default function Footer() {
               <span className="text-[#60a5fa]">Palmetto</span>Hacks
             </span>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-              A 12-hour hackathon hosted by Kappa Theta Pi in collaboration with
-              Microsoft and sponsored by Capgemini.
+              A 12-hour hackathon hosted by Kappa Theta Pi in partnership with
+              Microsoft and Capgemini.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((s) => (

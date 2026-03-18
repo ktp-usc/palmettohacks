@@ -1,29 +1,23 @@
-const schedule: { time: string; title: string; description: string; type: "main" | "food" | "workshop" | "judging" }[] = [
-  { time: "9:00 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                        type: "main"     },
-  { time: "9:30 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry collaborators.",             type: "main"     },
-  { time: "10:00 AM", title: "Hacking Begins",            description: "Form your teams and start building!",                                            type: "main"     },
-  { time: "10:30 AM", title: "Workshop: Azure AI",        description: "Hands-on intro to Azure AI services with Microsoft engineers.",                   type: "workshop" },
-  { time: "12:00 PM", title: "Lunch",                     description: "Fuel up at the halfway point.",                                                   type: "food"     },
-  { time: "1:00 PM",  title: "Workshop: Agile in Practice", description: "How Capgemini teams ship great products fast.",                                 type: "workshop" },
-  { time: "2:30 PM",  title: "Mentorship Hours",          description: "Get 1-on-1 time with mentors from Microsoft and Capgemini.",                     type: "workshop" },
-  { time: "5:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                            type: "main"     },
-  { time: "5:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                             type: "judging"  },
-  { time: "7:30 PM",  title: "Dinner",                    description: "Celebrate your hard work over a meal before the awards.",                        type: "food"     },
-  { time: "8:00 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!",        type: "main"     },
-  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!",                                 type: "main"     },
+const schedule: { time: string; title: string; description: string; type: "main" | "food" | "judging" }[] = [
+  { time: "8:30 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                     type: "main"    },
+  { time: "9:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners.",              type: "main"    },
+  { time: "9:30 AM",  title: "Hacking Begins",            description: "Form your teams and start building!",                                        type: "main"    },
+  { time: "1:00 PM",  title: "Lunch",                     description: "Fuel up and keep building.",                                                 type: "food"    },
+  { time: "7:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                        type: "main"    },
+  { time: "7:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                         type: "judging" },
+  { time: "8:30 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!",   type: "main"    },
+  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!",                            type: "main"    },
 ];
 
 const typeColors: Record<string, string> = {
   main: "bg-[#60a5fa]/20 text-[#60a5fa] border-[#60a5fa]/30",
   food: "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  workshop: "bg-violet-500/20 text-violet-400 border-violet-500/30",
   judging: "bg-purple-500/20 text-purple-400 border-purple-500/30",
 };
 
 const typeLabels: Record<string, string> = {
   main: "Event",
   food: "Food",
-  workshop: "Workshop",
   judging: "Judging",
 };
 
