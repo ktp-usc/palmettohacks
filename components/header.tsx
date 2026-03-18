@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-md bg-black/60 border-b border-white/5">
       {/* Logo */}
-      <a href="#home" className="flex items-center gap-2 font-bold text-white text-lg">
+      <a href="#" className="flex items-center gap-2 font-bold text-white text-lg">
         <span className="text-[#60a5fa]">Palmetto</span>Hacks
       </a>
 
