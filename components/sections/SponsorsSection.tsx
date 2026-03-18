@@ -132,7 +132,7 @@ export default function SponsorsSection() {
             Interested in sponsoring PalmettoHacks?
           </p>
           <a
-            href="mailto:ktp@usc.edu"
+            href="mailto:soktp@mailbox.sc.edu"
             className="text-[#4ade80] text-sm font-medium hover:underline"
           >
             Get in touch →

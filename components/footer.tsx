@@ -78,10 +78,18 @@ export default function Footer() {
               Contact
             </span>
             <a
-              href="mailto:ktp@usc.edu"
+              href="mailto:soktp@mailbox.sc.edu"
               className="text-sm text-white/60 hover:text-white transition-colors"
             >
-              ktp@usc.edu
+              soktp@mailbox.sc.edu
+            </a>
+            <a
+              href="https://ktpusc.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-white/60 hover:text-white transition-colors"
+            >
+              ktpusc.com
             </a>
             <span className="text-sm text-white/60">University of South Carolina</span>
             <span className="text-sm text-white/60">Columbia, SC</span>

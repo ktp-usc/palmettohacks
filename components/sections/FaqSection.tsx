@@ -93,7 +93,7 @@ export default function FaqSection() {
         {/* Contact CTA */}
         <div className="mt-12 text-center text-white/50 text-sm">
           Still have questions?{" "}
-          <a href="mailto:ktp@usc.edu" className="text-[#4ade80] hover:underline">
+          <a href="mailto:soktp@mailbox.sc.edu" className="text-[#4ade80] hover:underline">
             Contact us
           </a>
         </div>
