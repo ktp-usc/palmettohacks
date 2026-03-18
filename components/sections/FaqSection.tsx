@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     q: "What should I bring?",
-    a: "Bring your laptop, charger, and any hardware you want to hack with. We'll provide meals, snacks, Wi-Fi, and a comfortable hacking environment. Sleeping bags are optional but welcome for those pulling all-nighters!",
+    a: "Bring your laptop, charger, and any hardware you want to hack with. We'll provide meals, snacks, Wi-Fi, and a comfortable hacking environment. PalmettoHacks runs 9 AM – 9 PM on a single day, so no overnight stay is needed.",
   },
   {
     q: "What kind of projects can I build?",
-    a: "You can build anything — web apps, mobile apps, hardware projects, AI/ML models, games, and more. There are no topic restrictions. We'll share optional challenge tracks from our sponsors Microsoft and Capgemini with special prizes for top entries.",
+    a: "You can build anything — web apps, mobile apps, hardware projects, AI/ML models, games, and more. There are no topic restrictions. We'll share optional challenge tracks from our collaborators and sponsors with special prizes for top entries.",
   },
   {
     q: "Will there be mentors available?",

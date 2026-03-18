@@ -37,8 +37,8 @@ export default function Footer() {
               <span className="text-[#4ade80]">Palmetto</span>Hacks
             </span>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-              A 24-hour hackathon hosted by Kappa Theta Pi in partnership with
-              Microsoft and Capgemini.
+              A 12-hour hackathon hosted by Kappa Theta Pi in collaboration with
+              Microsoft and sponsored by Capgemini.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((s) => (
@@ -83,8 +83,8 @@ export default function Footer() {
             >
               ktp@usc.edu
             </a>
-            <span className="text-sm text-white/60">University of Southern California</span>
-            <span className="text-sm text-white/60">Los Angeles, CA</span>
+            <span className="text-sm text-white/60">University of South Carolina</span>
+            <span className="text-sm text-white/60">Columbia, SC</span>
           </div>
         </div>
 

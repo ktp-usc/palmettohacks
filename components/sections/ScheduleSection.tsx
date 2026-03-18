@@ -1,27 +1,16 @@
-const days: { label: string; events: { time: string; title: string; description: string; type: "main" | "food" | "workshop" | "judging" }[] }[] = [
-  {
-    label: "Day 1 — Kickoff",
-    events: [
-      { time: "5:00 PM", title: "Check-In Opens", description: "Get your badge, swag bag, and meet your fellow hackers.", type: "main" },
-      { time: "6:00 PM", title: "Opening Ceremony", description: "Welcome remarks from KTP leadership, Microsoft, and Capgemini.", type: "main" },
-      { time: "7:00 PM", title: "Hacking Begins", description: "Form your teams and start building!", type: "main" },
-      { time: "7:30 PM", title: "Dinner", description: "Fuel up for the long night ahead.", type: "food" },
-      { time: "8:00 PM", title: "Workshop: Azure AI", description: "Hands-on intro to Azure AI services with Microsoft engineers.", type: "workshop" },
-      { time: "9:30 PM", title: "Workshop: Agile in Practice", description: "How Capgemini teams ship great products fast.", type: "workshop" },
-      { time: "11:00 PM", title: "Midnight Snacks", description: "Late-night fuel to keep the ideas flowing.", type: "food" },
-    ],
-  },
-  {
-    label: "Day 2 — Crunch Time",
-    events: [
-      { time: "8:00 AM", title: "Breakfast", description: "Rise, shine, and eat before the final push.", type: "food" },
-      { time: "9:00 AM", title: "Mentorship Hours", description: "Get 1-on-1 time with mentors from Microsoft and Capgemini.", type: "workshop" },
-      { time: "12:00 PM", title: "Lunch", description: "Midday recharge.", type: "food" },
-      { time: "4:00 PM", title: "Submissions Due", description: "Submit your project on Devpost before the deadline!", type: "main" },
-      { time: "4:30 PM", title: "Judging Begins", description: "Demo your project to our panel of industry judges.", type: "judging" },
-      { time: "6:30 PM", title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Celebrate your hard work!", type: "main" },
-    ],
-  },
+const schedule: { time: string; title: string; description: string; type: "main" | "food" | "workshop" | "judging" }[] = [
+  { time: "9:00 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                        type: "main"     },
+  { time: "9:30 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry collaborators.",             type: "main"     },
+  { time: "10:00 AM", title: "Hacking Begins",            description: "Form your teams and start building!",                                            type: "main"     },
+  { time: "10:30 AM", title: "Workshop: Azure AI",        description: "Hands-on intro to Azure AI services with Microsoft engineers.",                   type: "workshop" },
+  { time: "12:00 PM", title: "Lunch",                     description: "Fuel up at the halfway point.",                                                   type: "food"     },
+  { time: "1:00 PM",  title: "Workshop: Agile in Practice", description: "How Capgemini teams ship great products fast.",                                 type: "workshop" },
+  { time: "2:30 PM",  title: "Mentorship Hours",          description: "Get 1-on-1 time with mentors from Microsoft and Capgemini.",                     type: "workshop" },
+  { time: "5:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                            type: "main"     },
+  { time: "5:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                             type: "judging"  },
+  { time: "7:30 PM",  title: "Dinner",                    description: "Celebrate your hard work over a meal before the awards.",                        type: "food"     },
+  { time: "8:00 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!",        type: "main"     },
+  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!",                                 type: "main"     },
 ];
 
 const typeColors: Record<string, string> = {
@@ -48,46 +37,38 @@ export default function ScheduleSection() {
             Schedule
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            24 Hours of{" "}
+            12 Hours of{" "}
             <span className="text-[#4ade80]">Innovation</span>
           </h2>
           <p className="max-w-xl text-white/60">
-            From the opening ceremony to the final demo, every moment of
-            PalmettoHacks is packed with learning and building.
+            Saturday, April 11, 2026 · 9 AM – 9 PM. From the opening ceremony
+            to the final demo, every moment of PalmettoHacks is packed with
+            learning and building.
           </p>
         </div>
 
-        {/* Day columns */}
-        <div className="flex flex-col gap-12">
-          {days.map((day) => (
-            <div key={day.label}>
-              <h3 className="mb-6 text-lg font-semibold text-white/80 uppercase tracking-widest text-sm">
-                {day.label}
-              </h3>
-              <div className="flex flex-col gap-3">
-                {day.events.map((event, i) => (
-                  <div
-                    key={i}
-                    className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-white/20 hover:bg-white/[0.05]"
+        {/* Events */}
+        <div className="flex flex-col gap-3">
+          {schedule.map((event, i) => (
+            <div
+              key={i}
+              className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-white/20 hover:bg-white/[0.05]"
+            >
+              {/* Time */}
+              <div className="w-24 shrink-0 text-sm font-mono text-white/40 pt-0.5">
+                {event.time}
+              </div>
+              {/* Content */}
+              <div className="flex flex-1 flex-col gap-1">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="font-medium text-white">{event.title}</span>
+                  <span
+                    className={`rounded-full border px-2 py-0.5 text-xs font-medium ${typeColors[event.type]}`}
                   >
-                    {/* Time */}
-                    <div className="w-20 shrink-0 text-sm font-mono text-white/40 pt-0.5">
-                      {event.time}
-                    </div>
-                    {/* Content */}
-                    <div className="flex flex-1 flex-col gap-1">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="font-medium text-white">{event.title}</span>
-                        <span
-                          className={`rounded-full border px-2 py-0.5 text-xs font-medium ${typeColors[event.type]}`}
-                        >
-                          {typeLabels[event.type]}
-                        </span>
-                      </div>
-                      <p className="text-sm text-white/50">{event.description}</p>
-                    </div>
-                  </div>
-                ))}
+                    {typeLabels[event.type]}
+                  </span>
+                </div>
+                <p className="text-sm text-white/50">{event.description}</p>
               </div>
             </div>
           ))}

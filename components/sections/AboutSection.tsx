@@ -1,5 +1,5 @@
 const stats = [
-  { value: "24hrs", label: "Hacking Time" },
+  { value: "12hrs", label: "Hacking Time" },
   { value: "200+", label: "Hackers" },
   { value: "$5k+", label: "In Prizes" },
   { value: "10+", label: "Workshops" },
@@ -22,7 +22,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-white/60 leading-relaxed text-base">
-              PalmettoHacks is a premier 24-hour hackathon hosted by{" "}
+              PalmettoHacks is a premier 12-hour hackathon hosted by{" "}
               <span className="text-white font-medium">Kappa Theta Pi</span> — the
               nation&apos;s leading professional technology fraternity. We bring
               together students from across the country to collaborate, learn, and
