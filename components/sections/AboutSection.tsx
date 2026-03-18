@@ -1,8 +1,6 @@
 const stats = [
-  { value: "12hrs", label: "Hacking Time" },
-  { value: "200+", label: "Hackers" },
-  { value: "$5k+", label: "In Prizes" },
-  { value: "10+", label: "Workshops" },
+  { value: "12hrs", label: "Building Time" },
+  { value: "100+", label: "Builders" },
 ];
 
 export default function AboutSection() {

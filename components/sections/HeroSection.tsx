@@ -46,7 +46,7 @@ export default function HeroSection() {
         {/* Hosted-by badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/70 backdrop-blur">
           <span className="inline-block h-2 w-2 rounded-full bg-[#60a5fa] animate-pulse" />
-          Hosted by Kappa Theta Pi · Powered by Microsoft &amp; Capgemini
+          Hosted by Kappa Theta Pi
         </div>
 
         {/* Title */}
