@@ -29,8 +29,8 @@ export default function AboutSection() {
               PalmettoHacks is a premier 12-hour hackathon hosted by{" "}
               <span className="text-white font-medium">Kappa Theta Pi</span> — the
               nation&apos;s leading professional technology fraternity. We bring
-              together students from across the country to collaborate, learn, and
-              build projects that push the boundaries of technology.
+              together students and industry professionals to collaborate, learn,
+              and build projects that push the boundaries of technology.
             </p>
 
             <p className="text-white/60 leading-relaxed text-base">

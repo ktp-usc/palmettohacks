@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Who can participate in PalmettoHacks?",
-    a: "PalmettoHacks is open to all currently enrolled university and college students. Whether you're a freshman or a graduate student, all skill levels and majors are welcome. You don't need to be a computer science major to participate!",
+    a: "PalmettoHacks is open to everyone — university and college students of all levels and majors, as well as industry professionals. Whether you're a freshman or a seasoned engineer, all skill levels are welcome. You don't need to be a computer science major to participate!",
   },
   {
     q: "Is there a registration fee?",
