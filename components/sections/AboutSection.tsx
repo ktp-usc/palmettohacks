@@ -7,9 +7,9 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative overflow-hidden py-24 px-4" style={{ background: "#07091a" }}>
       {/* Background glows */}
-      <div aria-hidden className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute -left-40 top-20 h-125 w-125 rounded-full"
         style={{ background: "radial-gradient(ellipse, rgba(96,165,250,0.06) 0%, transparent 70%)", filter: "blur(60px)" }} />
-      <div aria-hidden className="pointer-events-none absolute -right-32 bottom-10 h-[400px] w-[400px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute -right-32 bottom-10 h-100 w-100 rounded-full"
         style={{ background: "radial-gradient(ellipse, rgba(139,92,246,0.06) 0%, transparent 70%)", filter: "blur(60px)" }} />
 
       <div className="mx-auto max-w-6xl relative">

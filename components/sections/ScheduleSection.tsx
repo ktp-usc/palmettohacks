@@ -25,9 +25,9 @@ export default function ScheduleSection() {
   return (
     <section id="schedule" className="relative overflow-hidden py-24 px-4" style={{ background: "#07091a" }}>
       {/* Background glows */}
-      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-125 w-125 rounded-full"
         style={{ background: "radial-gradient(ellipse at top right, rgba(96,165,250,0.06) 0%, transparent 65%)", filter: "blur(70px)" }} />
-      <div aria-hidden className="pointer-events-none absolute left-0 bottom-0 h-[400px] w-[400px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute left-0 bottom-0 h-100 w-100 rounded-full"
         style={{ background: "radial-gradient(ellipse at bottom left, rgba(139,92,246,0.05) 0%, transparent 65%)", filter: "blur(70px)" }} />
 
       <div className="mx-auto max-w-4xl relative">

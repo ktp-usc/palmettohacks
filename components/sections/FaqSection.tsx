@@ -43,9 +43,9 @@ export default function FaqSection() {
   return (
     <section id="faq" className="relative overflow-hidden py-24 px-4" style={{ background: "#060810" }}>
       {/* Background glow */}
-      <div aria-hidden className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 h-[400px] w-[700px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 h-100 w-175 rounded-full"
         style={{ background: "radial-gradient(ellipse at bottom, rgba(96,165,250,0.06) 0%, transparent 70%)", filter: "blur(70px)" }} />
-      <div aria-hidden className="pointer-events-none absolute left-[10%] top-[20%] h-[300px] w-[300px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute left-[10%] top-[20%] h-75 w-75 rounded-full"
         style={{ background: "radial-gradient(ellipse, rgba(139,92,246,0.05) 0%, transparent 70%)", filter: "blur(60px)" }} />
 
       <div className="mx-auto max-w-3xl relative">
