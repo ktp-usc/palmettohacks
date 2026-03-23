@@ -5,23 +5,23 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Who can participate in PalmettoHacks?",
-    a: "PalmettoHacks is open to everyone — university and college students of all levels and majors, as well as industry professionals. Whether you're a freshman or a seasoned engineer, all skill levels are welcome. You don't need to be a computer science major to participate!",
+    a: "PalmettoHacks is open to all university and college students, regardless of year or major, as well as industry professionals. Whether you're a freshman or a seasoned professional, all skill levels are welcome. You don't need to be a CS major to join!",
   },
   {
     q: "Is there a registration fee?",
-    a: "No — PalmettoHacks is completely free to attend. We cover meals, snacks, and swag for all registered participants. Just bring your laptop and your ideas!",
+    a: "PalmettoHacks is completely free to attend. We cover meals for all registered participants. Just bring your laptop and your ideas!",
   },
   {
     q: "Do I need a team to register?",
-    a: "You can register as an individual or as part of a team. Teams can have up to 4 members. If you don't have a team yet, don't worry — we'll host a team formation event at the start of the hackathon so you can find collaborators.",
+    a: "You can register as an individual or as part of a team. Teams can have up to 4 members. If you don't have a team yet, don't worry, we'll host a team formation event at the start of the hackathon so you can find collaborators.",
   },
   {
     q: "What should I bring?",
-    a: "Bring your laptop, charger, and any hardware you want to hack with. We'll provide meals, snacks, Wi-Fi, and a comfortable hacking environment. PalmettoHacks runs 9 AM – 9 PM on a single day, so no overnight stay is needed.",
+    a: "Bring your laptop, charger, and any water/snacks you want. We'll provide meals, snacks, Wi-Fi, and a comfortable working environment. PalmettoHacks runs from 9 AM to 9 PM on a single day, so no overnight stay is needed.",
   },
   {
     q: "What kind of projects can I build?",
-    a: "You can build anything — web apps, mobile apps, hardware projects, AI/ML models, games, and more. There are no topic restrictions. We'll share optional challenge tracks from our collaborators and sponsors with special prizes for top entries.",
+    a: "We'll share challenge themes from our collaborators and sponsors once the event begins. You can build pretty much anything, as long as you're creative!",
   },
   {
     q: "Will there be mentors available?",
@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     q: "How will projects be judged?",
-    a: "Projects are evaluated on innovation, technical complexity, design, and real-world impact. Each team will give a live demo to a panel of judges from our sponsor companies and KTP leadership.",
+    a: "Projects are evaluated on innovation, technical feasibility, design, and real-world impact. Each team will give a live demo to a panel of judges from our partner companies.",
   },
   {
     q: "What are the prizes?",
-    a: "We'll have prizes for the overall top teams as well as sponsor-specific challenge track winners. Prize details will be announced closer to the event. Past prizes have included cash awards, tech gear, and internship fast-tracks.",
+    a: "We'll have prizes for the overall top teams after the judging completes. Prize details will be announced closer to the event, but they may include both monetary and mentorship-based prizes.",
   },
 ];
 

@@ -1,7 +1,7 @@
 const schedule: { time: string; title: string; description: string; type: "main" | "food" | "judging" }[] = [
   { time: "8:30 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                     type: "main"    },
   { time: "9:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners.",              type: "main"    },
-  { time: "9:30 AM",  title: "Hacking Begins",            description: "Form your teams and start building!",                                        type: "main"    },
+  { time: "9:30 AM",  title: "Building Begins",            description: "Form your teams and start building!",                                        type: "main"    },
   { time: "1:00 PM",  title: "Lunch",                     description: "Fuel up and keep building.",                                                 type: "food"    },
   { time: "7:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                        type: "main"    },
   { time: "7:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                         type: "judging" },

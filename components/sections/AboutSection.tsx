@@ -44,7 +44,7 @@ export default function AboutSection() {
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              {["Open to All Skill Levels", "Free to Attend", "Meals Provided", "Swag & Prizes"].map(
+              {["Open to All Skill Levels", "Free to Attend", "Meals Provided"].map(
                 (tag) => (
                   <span
                     key={tag}
