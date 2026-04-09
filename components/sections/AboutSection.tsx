@@ -1,6 +1,6 @@
 const stats = [
   { value: "12hrs", label: "Building Time" },
-  { value: "100+", label: "Builders" },
+  { value: "3", label: "Tracks" },
 ];
 
 export default function AboutSection() {
