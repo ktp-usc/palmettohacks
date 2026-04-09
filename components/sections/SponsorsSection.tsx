@@ -2,13 +2,13 @@ const collaborators = [
   {
     name: "Microsoft",
     description:
-      "PalmettoHacks is held in collaboration with Zach Oxendine of Microsoft. He has provided the vision and support to make this event possible, and will be on-site during the hackathon to mentor students and judge projects.",
+      "PalmettoHacks is held in collaboration with Zach Oxendine of Microsoft. He will be on-site during the hackathon to mentor students and judge projects.",
     logo: (
       // eslint-disable-next-line @next/next/no-img-element
       <img src="/logos/microsoft.svg" alt="Microsoft" className="h-10 w-10" />
     ),
     badge: "Collaborator",
-    badgeClass: "border-blue-500/30 bg-blue-500/10 text-blue-400",
+    badgeClass: "border-[#60a5fa]/40 bg-[#60a5fa]/10 text-[#60a5fa]",
   },
   {
     name: "Capgemini",
@@ -19,6 +19,28 @@ const collaborators = [
       <img src="/logos/capgemini.svg" alt="Capgemini" className="h-10 w-10 rounded-xl" />
     ),
     badge: "Partner",
+    badgeClass: "border-[#60a5fa]/40 bg-[#60a5fa]/10 text-[#60a5fa]",
+  },
+  {
+    name: "SC Department of Health and Human Services",
+    description:
+      "The South Carolina Department of Health and Human Services (SCDHHS) administers the state's Medicaid program and works to improve the health and well-being of South Carolinians through innovative programs and partnerships.",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src="/logos/scdhhs.jpg" alt="SCDHHS" className="h-10 w-10 rounded-xl" />
+    ),
+    badge: "Partner",
+    badgeClass: "border-[#60a5fa]/40 bg-[#60a5fa]/10 text-[#60a5fa]",
+  },
+  {
+    name: "USC Division of Information Technology",
+    description:
+      "The University of South Carolina's Division of Information Technology (DoIT) provides the technology infrastructure and services that power the university, supporting students, faculty, and staff across the UofSC system.",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src="/logos/doit.jpg" alt="USC DoIT" className="h-10 w-10 rounded-xl" />
+    ),
+    badge: "Sponsor",
     badgeClass: "border-[#60a5fa]/40 bg-[#60a5fa]/10 text-[#60a5fa]",
   },
 ];

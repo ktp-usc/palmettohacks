@@ -87,7 +87,7 @@ export default function HeroSection() {
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsPjiRCXEiROLnWfj4i3hiMK-WSwEuUQ8ygVWz5QR2X1oXmw/viewform" target="_blank" rel="noreferrer">
+          <a href="https://events.mlh.io/events/13993-palmettohacks" target="_blank" rel="noreferrer">
             <Button
               size="lg"
               className="bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6] px-8"
