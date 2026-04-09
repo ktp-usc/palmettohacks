@@ -35,7 +35,7 @@ export default function Header() {
 
       {/* CTA */}
       <div className="hidden md:flex">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsPjiRCXEiROLnWfj4i3hiMK-WSwEuUQ8ygVWz5QR2X1oXmw/viewform" target="_blank" rel="noreferrer">
+        <a href="https://events.mlh.io/events/13993-palmettohacks" target="_blank" rel="noreferrer">
           <Button
             size="sm"
             className="bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6]"
@@ -73,7 +73,7 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsPjiRCXEiROLnWfj4i3hiMK-WSwEuUQ8ygVWz5QR2X1oXmw/viewform" target="_blank" rel="noreferrer">
+          <a href="https://events.mlh.io/events/13993-palmettohacks" target="_blank" rel="noreferrer">
             <Button
               size="sm"
               className="w-fit bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6]"
