@@ -1,7 +1,7 @@
 const schedule: { time: string; title: string; description: string; type: "main" | "food" | "judging" }[] = [
   { time: "8:30 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                     type: "main"    },
   { time: "9:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners.",              type: "main"    },
-  { time: "9:30 AM",  title: "Hacking Begins",            description: "Form your teams and start building!",                                        type: "main"    },
+  { time: "9:30 AM",  title: "Building Begins",            description: "Form your teams and start building!",                                        type: "main"    },
   { time: "1:00 PM",  title: "Lunch",                     description: "Fuel up and keep building.",                                                 type: "food"    },
   { time: "7:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                        type: "main"    },
   { time: "7:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                         type: "judging" },
@@ -25,9 +25,9 @@ export default function ScheduleSection() {
   return (
     <section id="schedule" className="relative overflow-hidden py-24 px-4" style={{ background: "#07091a" }}>
       {/* Background glows */}
-      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-125 w-125 rounded-full"
         style={{ background: "radial-gradient(ellipse at top right, rgba(96,165,250,0.06) 0%, transparent 65%)", filter: "blur(70px)" }} />
-      <div aria-hidden className="pointer-events-none absolute left-0 bottom-0 h-[400px] w-[400px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute left-0 bottom-0 h-100 w-100 rounded-full"
         style={{ background: "radial-gradient(ellipse at bottom left, rgba(139,92,246,0.05) 0%, transparent 65%)", filter: "blur(70px)" }} />
 
       <div className="mx-auto max-w-4xl relative">

@@ -49,7 +49,7 @@ export default function SponsorsSection() {
   return (
     <section id="partners" className="relative overflow-hidden py-24 px-4" style={{ background: "#060810" }}>
       {/* Background glow */}
-      <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[800px] rounded-full"
+      <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-150 w-200 rounded-full"
         style={{ background: "radial-gradient(ellipse, rgba(96,165,250,0.05) 0%, transparent 70%)", filter: "blur(80px)" }} />
 
       <div className="mx-auto max-w-5xl relative">

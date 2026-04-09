@@ -16,7 +16,7 @@ export default function HeroSection() {
       {/* Blue glow orbs */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 h-[60vw] w-[90vw] max-h-[700px] max-w-[1000px] rounded-full"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 h-[60vw] w-[90vw] max-h-175 max-w-250 rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(96,165,250,0.12) 0%, transparent 65%)",
@@ -25,7 +25,7 @@ export default function HeroSection() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute left-[10%] top-[20%] z-0 h-[40vw] w-[40vw] max-h-[400px] max-w-[400px] rounded-full"
+        className="pointer-events-none absolute left-[10%] top-[20%] z-0 h-[40vw] w-[40vw] max-h-100 max-w-100 rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(139,92,246,0.10) 0%, transparent 70%)",
@@ -34,7 +34,7 @@ export default function HeroSection() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute right-[10%] top-[40%] z-0 h-[35vw] w-[35vw] max-h-[350px] max-w-[350px] rounded-full"
+        className="pointer-events-none absolute right-[10%] top-[40%] z-0 h-[35vw] w-[35vw] max-h-87.5 max-w-87.5 rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(56,189,248,0.08) 0%, transparent 70%)",
