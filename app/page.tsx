@@ -5,6 +5,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import SponsorsSection from "@/components/sections/SponsorsSection";
 import ScheduleSection from "@/components/sections/ScheduleSection";
 import FaqSection from "@/components/sections/FaqSection";
+import MLHSection from "@/components/sections/MLHSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SponsorsSection />
+        <MLHSection />
         <ScheduleSection />
         <FaqSection />
       </main>
