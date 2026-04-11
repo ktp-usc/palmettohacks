@@ -1,25 +1,12 @@
-const schedule: { time: string; title: string; description: string; type: "main" | "food" | "judging" }[] = [
-  { time: "8:30 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers.",                     type: "main"    },
-  { time: "9:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners.",              type: "main"    },
-  { time: "9:30 AM",  title: "Building Begins",            description: "Form your teams and start building!",                                        type: "main"    },
-  { time: "1:00 PM",  title: "Lunch",                     description: "Fuel up and keep building.",                                                 type: "food"    },
-  { time: "7:00 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!",                        type: "main"    },
-  { time: "7:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges.",                         type: "judging" },
-  { time: "8:30 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!",   type: "main"    },
-  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!",                            type: "main"    },
+const schedule: { time: string; title: string; description: string }[] = [
+  { time: "8:30 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers."                   },
+  { time: "9:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners."            },
+  { time: "9:30 AM",  title: "Building Begins",            description: "Form your teams and start building!"                                     },
+  { time: "7:30 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!"                      },
+  { time: "7:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges."                       },
+  { time: "8:30 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!" },
+  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!"                          },
 ];
-
-const typeColors: Record<string, string> = {
-  main: "bg-[#60a5fa]/20 text-[#60a5fa] border-[#60a5fa]/30",
-  food: "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  judging: "bg-purple-500/20 text-purple-400 border-purple-500/30",
-};
-
-const typeLabels: Record<string, string> = {
-  main: "Event",
-  food: "Food",
-  judging: "Judging",
-};
 
 export default function ScheduleSection() {
   return (
@@ -62,11 +49,6 @@ export default function ScheduleSection() {
               <div className="flex flex-1 flex-col gap-1">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="font-medium text-white">{event.title}</span>
-                  <span
-                    className={`rounded-full border px-2 py-0.5 text-xs font-medium ${typeColors[event.type]}`}
-                  >
-                    {typeLabels[event.type]}
-                  </span>
                 </div>
                 <p className="text-sm text-white/50">{event.description}</p>
               </div>
