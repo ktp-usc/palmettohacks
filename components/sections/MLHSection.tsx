@@ -9,7 +9,7 @@ export default function MLHSection() {
           MLH Recognized
         </div>
 
-        <div className="flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-white/[0.03] px-10 py-10 max-w-2xl w-full">
+        <div className="flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-white/3 px-10 py-10 max-w-2xl w-full">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-color.svg"

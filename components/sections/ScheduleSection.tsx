@@ -39,7 +39,7 @@ export default function ScheduleSection() {
           {schedule.map((event, i) => (
             <div
               key={i}
-              className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-white/20 hover:bg-white/[0.05]"
+              className="flex gap-4 rounded-2xl border border-white/10 bg-white/3 p-4 transition hover:border-white/20 hover:bg-white/5"
             >
               {/* Time */}
               <div className="w-24 shrink-0 text-sm font-mono text-white/40 pt-0.5">

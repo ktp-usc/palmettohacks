@@ -74,7 +74,7 @@ export default function AboutSection() {
         </div>
 
         {/* KTP blurb */}
-        <div className="mt-20 rounded-3xl border border-white/10 bg-white/[0.03] p-8 sm:p-12">
+        <div className="mt-20 rounded-3xl border border-white/10 bg-white/3 p-8 sm:p-12">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
             {/* KTP logo placeholder */}
             <div className="shrink-0 flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl font-black text-[#60a5fa]">

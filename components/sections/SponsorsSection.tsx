@@ -74,7 +74,7 @@ export default function SponsorsSection() {
           {collaborators.map((c) => (
             <div
               key={c.name}
-              className="group flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:border-white/20 hover:bg-white/[0.06]"
+              className="group flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/3 p-8 transition hover:border-white/20 hover:bg-white/6"
             >
               <div className="flex items-center justify-between">
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5">

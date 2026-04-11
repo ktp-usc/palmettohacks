@@ -69,11 +69,11 @@ export default function FaqSection() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden"
+              className="rounded-2xl border border-white/10 bg-white/3 overflow-hidden"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-white hover:bg-white/[0.03] transition"
+                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-white hover:bg-white/3 transition"
                 aria-expanded={open === i}
               >
                 <span className="font-medium">{faq.q}</span>
