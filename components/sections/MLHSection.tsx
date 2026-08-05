@@ -17,18 +17,13 @@ export default function MLHSection() {
             className="h-14 w-auto"
           />
           <div className="flex flex-col items-center gap-3">
-            <h3 className="text-2xl font-bold text-white">An Official MLH Hack Day</h3>
+            <h3 className="text-2xl font-bold text-white">An Official MLH Event</h3>
             <p className="text-white/60 leading-relaxed">
               PalmettoHacks is recognized by Major League Hacking (MLH), the official student hackathon league. MLH powers over 200 hackathons worldwide and supports student hackers with resources, mentorship, and community.
             </p>
-            <a
-              href="https://events.mlh.io/events/13993-palmettohacks"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/10"
-            >
-              View on MLH →
-            </a>
+            <span className="mt-2 inline-flex items-center gap-2 rounded-full border border-dashed border-white/20 bg-white/5 px-5 py-2 text-sm font-medium text-white/50">
+              2026 MLH event page coming soon
+            </span>
           </div>
         </div>
       </div>

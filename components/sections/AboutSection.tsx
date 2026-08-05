@@ -1,6 +1,6 @@
 const stats = [
-  { value: "12hrs", label: "Building Time" },
-  { value: "2", label: "Tracks" },
+  { value: "24hrs", label: "Building Time" },
+  { value: "TBD", label: "Tracks" },
 ];
 
 export default function AboutSection() {
@@ -26,7 +26,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-white/60 leading-relaxed text-base">
-              PalmettoHacks is a premier 12-hour hackathon hosted by{" "}
+              PalmettoHacks 2026 is a premier 24-hour hackathon hosted by{" "}
               <span className="text-white font-medium">Kappa Theta Pi</span> — the
               nation&apos;s leading professional technology fraternity. We bring
               together students and industry professionals to collaborate, learn,
@@ -35,16 +35,14 @@ export default function AboutSection() {
 
             <p className="text-white/60 leading-relaxed text-base">
               Whether you&apos;re an experienced engineer or picking up your first
-              programming language, PalmettoHacks is the place to grow.
-              With mentors from{" "}
-              <span className="text-white font-medium">Microsoft</span> and{" "}
-              <span className="text-white font-medium">Capgemini</span>,
-              world-class workshops, and exciting prizes, you&apos;ll leave inspired
-              and leveled up.
+              programming language, PalmettoHacks is the place to grow. With
+              industry mentors, world-class workshops, and exciting prizes,
+              you&apos;ll leave inspired and leveled up. Sponsors and challenge
+              tracks for 2026 will be announced soon.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              {["Open to All Skill Levels", "Free to Attend", "Meals Provided"].map(
+              {["Open to All Skill Levels", "Free to Attend", "Meals Provided", "Overnight Event"].map(
                 (tag) => (
                   <span
                     key={tag}

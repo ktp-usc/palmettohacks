@@ -43,21 +43,24 @@ export default function HeroSection() {
       />
 
       <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
-        {/* Hosted-by badge */}
+        {/* Coming-soon badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs sm:text-sm text-white/70 backdrop-blur text-center">
           <span className="inline-block h-2 w-2 rounded-full bg-[#60a5fa] animate-pulse" />
-          Hosted by Kappa Theta Pi
+          Coming Soon · Hosted by Kappa Theta Pi
         </div>
 
         {/* Title */}
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-8xl">
           Palmetto
           <span className="text-[#60a5fa]">Hacks</span>
+          <span className="block text-3xl font-bold text-white/70 sm:text-4xl md:text-5xl mt-2">
+            2026
+          </span>
         </h1>
 
         {/* Subtitle */}
         <p className="max-w-2xl text-lg text-white/60 sm:text-xl">
-          A 12-hour hackathon challenging students to build innovative technology
+          A 24-hour hackathon challenging students to build innovative technology
           solutions. Compete, collaborate, and create at the premier student
           hackathon in South Carolina.
         </p>
@@ -68,13 +71,13 @@ export default function HeroSection() {
             <svg className="h-4 w-4 text-[#60a5fa]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            <span>Saturday, April 11, 2026</span>
+            <span>Saturday, October 10, 2026</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="h-4 w-4 text-[#60a5fa]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>12 Hours</span>
+            <span>24 Hours</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="h-4 w-4 text-[#60a5fa]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -86,15 +89,26 @@ export default function HeroSection() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <a href="https://events.mlh.io/events/13993-palmettohacks" target="_blank" rel="noreferrer">
-            <Button
-              size="lg"
-              className="bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6] px-8"
+        <div className="flex flex-col items-center gap-3 pt-2">
+          <Button
+            size="lg"
+            disabled
+            className="bg-[#60a5fa] text-black font-semibold px-8 disabled:opacity-60"
+          >
+            Registration Opens Soon
+          </Button>
+          <p className="text-sm text-white/40">
+            Follow{" "}
+            <a
+              href="https://www.instagram.com/ktpusc"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#60a5fa] hover:underline"
             >
-              Register Now
-            </Button>
-          </a>
+              @ktpusc
+            </a>{" "}
+            for registration updates.
+          </p>
         </div>
       </div>
 
