@@ -1,11 +1,16 @@
 const schedule: { time: string; title: string; description: string }[] = [
-  { time: "8:30 AM",  title: "Check-In Opens",           description: "Get your badge, swag bag, and meet your fellow hackers."                   },
-  { time: "9:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners."            },
-  { time: "9:30 AM",  title: "Building Begins",            description: "Form your teams and start building!"                                     },
-  { time: "7:30 PM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!"                      },
-  { time: "7:30 PM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges."                       },
-  { time: "8:30 PM",  title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!" },
-  { time: "9:00 PM",  title: "Event Ends",                description: "Thanks for hacking with us. See you next year!"                          },
+  { time: "Sat 9:00 AM",   title: "Check-In Opens",            description: "Get your badge, swag bag, and meet your fellow hackers."                   },
+  { time: "Sat 10:00 AM",  title: "Opening Ceremony",          description: "Welcome remarks from KTP leadership and our industry partners."            },
+  { time: "Sat 11:00 AM",  title: "Building Begins",           description: "Form your teams and start building! The 24-hour clock starts now."         },
+  { time: "Sat 1:00 PM",   title: "Lunch",                     description: "Refuel and network with mentors and fellow hackers."                       },
+  { time: "Sat 3:00 PM",   title: "Workshops",                 description: "Hands-on sessions from our mentors. Topics announced closer to the event." },
+  { time: "Sat 7:00 PM",   title: "Dinner",                    description: "Take a break, eat, and regroup with your team."                            },
+  { time: "Sun 12:00 AM",  title: "Midnight Snack",            description: "Late-night fuel and games to keep the energy up."                          },
+  { time: "Sun 7:00 AM",   title: "Breakfast",                 description: "Coffee and breakfast before the final push."                               },
+  { time: "Sun 11:00 AM",  title: "Submissions Due",           description: "Submit your project on Devpost before the deadline!"                       },
+  { time: "Sun 11:30 AM",  title: "Judging Begins",            description: "Demo your project to our panel of industry judges."                        },
+  { time: "Sun 1:00 PM",   title: "Closing Ceremony & Awards", description: "Winners announced, prizes awarded. Congratulations to all participants!"  },
+  { time: "Sun 2:00 PM",   title: "Event Ends",                description: "Thanks for hacking with us. See you next year!"                            },
 ];
 
 export default function ScheduleSection() {
@@ -24,13 +29,14 @@ export default function ScheduleSection() {
             Schedule
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            12 Hours of{" "}
+            24 Hours of{" "}
             <span className="text-[#60a5fa]">Innovation</span>
           </h2>
           <p className="max-w-xl text-white/60">
-            Saturday, April 11, 2026 · 9 AM – 9 PM. From the opening ceremony
-            to the final demo, every moment of PalmettoHacks is packed with
-            learning and building.
+            Saturday, October 10 – Sunday, October 11, 2026. From the opening
+            ceremony to the final demo, every moment of PalmettoHacks is packed
+            with learning and building. Schedule is tentative and subject to
+            change.
           </p>
         </div>
 
@@ -42,7 +48,7 @@ export default function ScheduleSection() {
               className="flex gap-4 rounded-2xl border border-white/10 bg-white/3 p-4 transition hover:border-white/20 hover:bg-white/5"
             >
               {/* Time */}
-              <div className="w-24 shrink-0 text-sm font-mono text-white/40 pt-0.5">
+              <div className="w-28 shrink-0 text-sm font-mono text-white/40 pt-0.5">
                 {event.time}
               </div>
               {/* Content */}

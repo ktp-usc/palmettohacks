@@ -4,6 +4,10 @@ import { useState } from "react";
 
 const faqs = [
   {
+    q: "When and where is PalmettoHacks 2026?",
+    a: "PalmettoHacks 2026 kicks off Saturday, October 10, 2026 at the University of South Carolina in Columbia, SC. It's a 24-hour event running overnight into Sunday, October 11. Registration and venue details will be announced soon.",
+  },
+  {
     q: "Who can participate in PalmettoHacks?",
     a: "PalmettoHacks is open to all university and college students, regardless of year or major, as well as industry professionals. Whether you're a freshman or a seasoned professional, all skill levels are welcome. You don't need to be a CS major to join!",
   },
@@ -17,15 +21,15 @@ const faqs = [
   },
   {
     q: "What should I bring?",
-    a: "Bring your laptop, charger, and any water/snacks you want. We'll provide meals, snacks, Wi-Fi, and a comfortable working environment. PalmettoHacks runs from 9 AM to 9 PM on a single day, so no overnight stay is needed.",
+    a: "Bring your laptop, charger, and any water/snacks you want. We'll provide meals, snacks, Wi-Fi, and a comfortable working environment. PalmettoHacks 2026 is a 24-hour overnight event, so also consider bringing a pillow, blanket, and a change of clothes.",
   },
   {
     q: "What kind of projects can I build?",
-    a: "We'll share challenge themes from our collaborators and sponsors once the event begins. You can build pretty much anything, as long as you're creative!",
+    a: "Tracks for 2026 are still being finalized. We'll share challenge themes from our sponsors closer to the event, and you can build pretty much anything, as long as you're creative!",
   },
   {
     q: "Will there be mentors available?",
-    a: "Yes! We'll have mentors from Microsoft, Capgemini, and KTP on-site throughout the hackathon to help with technical challenges, ideation, and project scoping.",
+    a: "Yes! We'll have KTP mentors and industry mentors from our sponsors on-site throughout the 24 hours to help with technical challenges, ideation, and project scoping. Our 2026 sponsor lineup will be announced soon.",
   },
   {
     q: "How will projects be judged?",

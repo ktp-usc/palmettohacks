@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Partners", href: "#partners" },
-  { label: "Schedule", href: "#schedule" },
+  // { label: "Schedule", href: "#schedule" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -35,14 +35,13 @@ export default function Header() {
 
       {/* CTA */}
       <div className="hidden md:flex">
-        <a href="https://events.mlh.io/events/13993-palmettohacks" target="_blank" rel="noreferrer">
-          <Button
-            size="sm"
-            className="bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6]"
-          >
-            Register
-          </Button>
-        </a>
+        <Button
+          size="sm"
+          disabled
+          className="bg-[#60a5fa] text-black font-semibold disabled:opacity-60"
+        >
+          Coming Soon
+        </Button>
       </div>
 
       {/* Mobile hamburger */}
@@ -73,14 +72,13 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a href="https://events.mlh.io/events/13993-palmettohacks" target="_blank" rel="noreferrer">
-            <Button
-              size="sm"
-              className="w-fit bg-[#60a5fa] text-black font-semibold hover:bg-[#3b82f6]"
-            >
-              Register
-            </Button>
-          </a>
+          <Button
+            size="sm"
+            disabled
+            className="w-fit bg-[#60a5fa] text-black font-semibold disabled:opacity-60"
+          >
+            Coming Soon
+          </Button>
         </div>
       )}
     </header>
