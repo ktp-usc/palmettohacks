@@ -1,96 +1,87 @@
-const stats = [
-  { value: "24hrs", label: "Building Time" },
-  { value: "TBD", label: "Tracks" },
+import { SectionBadge } from "@/components/ui/section-badge";
+import {
+  BadgeDollarSign,
+  GraduationCap,
+  Trophy,
+  UsersRound,
+  UtensilsCrossed,
+  Wrench,
+} from "lucide-react";
+
+const benefits = [
+  {
+    icon: BadgeDollarSign,
+    title: "Free to attend",
+    description: "No ticket, no entry fee. Bring a laptop and show up.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Every meal covered",
+    description: "Lunch, dinner, a midnight snack, and breakfast are on us.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Built for beginners",
+    description: "Any major, any year, any skill level. First hackathon welcome.",
+  },
+  {
+    icon: UsersRound,
+    title: "Teams of up to 4",
+    description: "Come with friends or come alone — we run team formation on site.",
+  },
+  {
+    icon: Wrench,
+    title: "Mentors in the room",
+    description: "KTP members and industry mentors on hand for all 24 hours.",
+  },
+  {
+    icon: Trophy,
+    title: "Prizes on the line",
+    description: "Awards for the top teams, judged by a panel of industry judges.",
+  },
 ];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative overflow-hidden py-24 px-4" style={{ background: "#07091a" }}>
+    <section id="about" className="relative overflow-hidden px-4 py-24" style={{ background: "#07091a" }}>
       {/* Background glows */}
       <div aria-hidden className="pointer-events-none absolute -left-40 top-20 h-125 w-125 rounded-full"
         style={{ background: "radial-gradient(ellipse, rgba(96,165,250,0.06) 0%, transparent 70%)", filter: "blur(60px)" }} />
       <div aria-hidden className="pointer-events-none absolute -right-32 bottom-10 h-100 w-100 rounded-full"
         style={{ background: "radial-gradient(ellipse, rgba(139,92,246,0.06) 0%, transparent 70%)", filter: "blur(60px)" }} />
 
-      <div className="mx-auto max-w-6xl relative">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-center">
-          {/* Text */}
-          <div className="flex flex-col gap-6">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#60a5fa]/20 bg-[#60a5fa]/10 px-4 py-1.5 text-sm text-[#60a5fa]">
-              About PalmettoHacks
-            </div>
+      <div className="relative mx-auto max-w-6xl">
+        {/* Heading */}
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+          <SectionBadge>About PalmettoHacks</SectionBadge>
 
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Where Ideas Become{" "}
-              <span className="text-[#60a5fa]">Reality</span>
-            </h2>
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            Where Ideas Become <span className="text-[#60a5fa]">Reality</span>
+          </h2>
 
-            <p className="text-white/60 leading-relaxed text-base">
-              PalmettoHacks 2026 is a premier 24-hour hackathon hosted by{" "}
-              <span className="text-white font-medium">Kappa Theta Pi</span> — the
-              nation&apos;s leading professional technology fraternity. We bring
-              together students and industry professionals to collaborate, learn,
-              and build projects that push the boundaries of technology.
-            </p>
-
-            <p className="text-white/60 leading-relaxed text-base">
-              Whether you&apos;re an experienced engineer or picking up your first
-              programming language, PalmettoHacks is the place to grow. With
-              industry mentors, world-class workshops, and exciting prizes,
-              you&apos;ll leave inspired and leveled up. Sponsors and challenge
-              tracks for 2026 will be announced soon.
-            </p>
-
-            <div className="flex flex-wrap gap-3 pt-2">
-              {["Open to All Skill Levels", "Free to Attend", "Meals Provided", "Overnight Event"].map(
-                (tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/70"
-                  >
-                    {tag}
-                  </span>
-                )
-              )}
-            </div>
-          </div>
-
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-white/5 p-8"
-              >
-                <span className="text-4xl font-extrabold text-[#60a5fa]">
-                  {s.value}
-                </span>
-                <span className="text-sm text-white/50">{s.label}</span>
-              </div>
-            ))}
-          </div>
+          <p className="leading-relaxed text-white/60">
+            PalmettoHacks is a 24-hour hackathon hosted by{" "}
+            <span className="font-medium text-white">Kappa Theta Pi</span> at the
+            University of South Carolina. You&apos;ll form a team, pick an idea, and
+            build it into something you can demo — all in one weekend, with mentors,
+            workshops, and food along the way.
+          </p>
         </div>
 
-        {/* KTP blurb */}
-        <div className="mt-20 rounded-3xl border border-white/10 bg-white/3 p-8 sm:p-12">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
-            {/* KTP logo placeholder */}
-            <div className="shrink-0 flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl font-black text-[#60a5fa]">
-              ΚΘΠ
+        {/* Benefits */}
+        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {benefits.map(({ icon: Icon, title, description }) => (
+            <div
+              key={title}
+              className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/3 p-6 transition hover:border-white/20 hover:bg-white/5"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#60a5fa]/20 bg-[#60a5fa]/10">
+                <Icon className="h-5 w-5 text-[#60a5fa]" aria-hidden />
+              </span>
+              <h3 className="font-semibold text-white">{title}</h3>
+              <p className="text-sm leading-relaxed text-white/50">{description}</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                About Kappa Theta Pi
-              </h3>
-              <p className="mt-2 text-white/60 leading-relaxed">
-                Kappa Theta Pi (KTP) is America&apos;s leading professional technology
-                fraternity, dedicated to bridging the gap between academia and
-                industry. With chapters across the nation, KTP empowers students
-                to become the next generation of tech leaders through networking,
-                mentorship, and hands-on projects like PalmettoHacks.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

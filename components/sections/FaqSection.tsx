@@ -2,14 +2,20 @@
 
 import { useState } from "react";
 
+import { SectionBadge } from "@/components/ui/section-badge";
+
 const faqs = [
+    {
+    q: "What is a hackathon?",
+    a: "Despite the name, it’s not a cybersecurity 'hacking' competition - it’s an invention marathon! Students from all majors (Computer Science, Engineering, Business, Design, and beyond) team up to build a product over the weekend and pitch it to industry judges. Whether a student is writing code, designing a UI, building a robot, or considering business models, there's tracks for them!",
+  },
   {
     q: "When and where is PalmettoHacks 2026?",
-    a: "PalmettoHacks 2026 kicks off Saturday, October 10, 2026 at the University of South Carolina in Columbia, SC. It's a 24-hour event running overnight into Sunday, October 11. Registration and venue details will be announced soon.",
+    a: "PalmettoHacks 2026 kicks off Saturday, October 10, 2026 at the University of South Carolina in Columbia, SC. It's a 24-hour event running overnight into Sunday, October 11. Specific venue details will be shared with registered participants.",
   },
   {
     q: "Who can participate in PalmettoHacks?",
-    a: "PalmettoHacks is open to all university and college students, regardless of year or major, as well as industry professionals. Whether you're a freshman or a seasoned professional, all skill levels are welcome. You don't need to be a CS major to join!",
+    a: "PalmettoHacks is open to all university and college students, regardless of year or major. Whether you're a freshman or a seasoned professional, all skill levels are welcome. You don't need to be a CS major to join!",
   },
   {
     q: "Is there a registration fee?",
@@ -29,7 +35,7 @@ const faqs = [
   },
   {
     q: "Will there be mentors available?",
-    a: "Yes! We'll have KTP mentors and industry mentors from our sponsors on-site throughout the 24 hours to help with technical challenges, ideation, and project scoping. Our 2026 sponsor lineup will be announced soon.",
+    a: "Yes! We'll have KTP mentors and industry mentors from our sponsors on-site throughout the 24 hours to help with technical challenges, ideation, and project scoping. You can see our 2026 sponsors above.",
   },
   {
     q: "How will projects be judged?",
@@ -37,7 +43,7 @@ const faqs = [
   },
   {
     q: "What are the prizes?",
-    a: "We'll have prizes for the overall top teams after the judging completes. Prize details will be announced closer to the event, but they may include both monetary and mentorship-based prizes.",
+    a: "We'll have prizes for the overall top teams after the judging completes. Prize details will be announced closer to the event, but they may include both monetary and internship-based prizes.",
   },
 ];
 
@@ -55,9 +61,7 @@ export default function FaqSection() {
       <div className="mx-auto max-w-3xl relative">
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center mb-16">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#60a5fa]/20 bg-[#60a5fa]/10 px-4 py-1.5 text-sm text-[#60a5fa]">
-            FAQ
-          </div>
+          <SectionBadge>FAQ</SectionBadge>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Common{" "}
             <span className="text-[#60a5fa]">Questions</span>
@@ -77,12 +81,12 @@ export default function FaqSection() {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-white hover:bg-white/3 transition"
+                className="group flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#60a5fa]/60"
                 aria-expanded={open === i}
               >
                 <span className="font-medium">{faq.q}</span>
                 <svg
-                  className={`h-5 w-5 shrink-0 text-[#60a5fa] transition-transform duration-200 ${open === i ? "rotate-45" : ""}`}
+                  className={`h-5 w-5 shrink-0 text-[#60a5fa] transition-transform duration-200 group-hover:scale-125 ${open === i ? "rotate-45" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={2}

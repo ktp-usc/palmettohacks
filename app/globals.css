@@ -46,6 +46,9 @@
     /* PalmettoHacks brand colours */
     --color-ph-blue: var(--ph-blue);
     --color-ph-blue-dim: var(--ph-blue-dim);
+    --color-ph-yellow: var(--ph-yellow);
+    --color-ph-yellow-bright: var(--ph-yellow-bright);
+    --color-ph-yellow-deep: var(--ph-yellow-deep);
     --color-ph-surface: var(--ph-surface);
     --color-ph-surface-2: var(--ph-surface-2);
 }
@@ -87,6 +90,10 @@
     /* PalmettoHacks brand */
     --ph-blue: #60a5fa;
     --ph-blue-dim: rgba(96, 165, 250, 0.15);
+    /* Sampled from the official MLH trust badge so brand yellow matches it exactly. */
+    --ph-yellow: #f8b92a;
+    --ph-yellow-bright: #fbcd63;
+    --ph-yellow-deep: #d99a1b;
     --ph-surface: rgba(255, 255, 255, 0.04);
     --ph-surface-2: rgba(255, 255, 255, 0.08);
 }
@@ -100,5 +107,23 @@
     }
   html {
     scroll-behavior: smooth;
+  }
+}
+
+/* MLH trust badge: glow on hover. drop-shadow follows the badge's cut-out
+   silhouette, which a box-shadow would square off. */
+#mlh-trust-badge {
+  transition: filter 220ms ease;
+}
+
+#mlh-trust-badge:hover,
+#mlh-trust-badge:focus-visible {
+  filter: drop-shadow(0 0 10px rgba(248, 185, 42, 0.75))
+    drop-shadow(0 0 28px rgba(248, 185, 42, 0.4));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #mlh-trust-badge {
+    transition: none;
   }
 }
