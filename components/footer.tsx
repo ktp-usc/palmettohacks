@@ -1,7 +1,8 @@
 const footerLinks = [
   { label: "About", href: "#about" },
+  { label: "Schedule", href: "#schedule" },
   { label: "Partners", href: "#partners" },
-  // { label: "Schedule", href: "#schedule" },
+  { label: "Organizers", href: "#organizers" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -43,6 +44,18 @@ export default function Footer() {
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
               PalmettoHacks 2026 — a 24-hour hackathon hosted by Kappa Theta Pi.
               October 10, 2026 at the University of South Carolina.
+            </p>
+            <p className="max-w-xs text-sm leading-relaxed text-white/50">
+              All attendees, sponsors, and mentors are expected to follow the{" "}
+              <a
+                href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#60a5fa] hover:underline"
+              >
+                MLH Code of Conduct
+              </a>
+              .
             </p>
             <div className="flex gap-4">
               {socialLinks.map((s) => (
@@ -101,7 +114,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
-          <span>© {new Date().getFullYear()} Kappa Theta Pi - Alpha Theta Chapter. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Kappa Theta Pi - USC. All rights reserved.</span>
           <span>Built with ♥ by KTP</span>
         </div>
       </div>

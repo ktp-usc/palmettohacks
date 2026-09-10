@@ -1,12 +1,50 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { CalendarDays, Clock, MapPin, Zap } from "lucide-react";
+
+const eventStart = new Date("2026-10-10T09:00:00-04:00");
+
+const eventMeta = [
+  { icon: CalendarDays, label: "Saturday, October 10, 2026" },
+  { icon: Clock, label: "24 Hours" },
+  { icon: MapPin, label: "University of South Carolina" },
+];
+
+const trustPoints = ["Free to attend", "All majors welcome", "Meals provided", "Official MLH event"];
+
+type Countdown = { Days: number; Hours: number; Minutes: number; Seconds: number };
+
+function useCountdown(target: Date) {
+  // Rendered only after mount so the server and client markup agree.
+  const [parts, setParts] = useState<Countdown | null>(null);
+
+  useEffect(() => {
+    const tick = () => {
+      const remaining = target.getTime() - Date.now();
+      if (remaining <= 0) return setParts(null);
+      setParts({
+        Days: Math.floor(remaining / 86400000),
+        Hours: Math.floor((remaining / 3600000) % 24),
+        Minutes: Math.floor((remaining / 60000) % 60),
+        Seconds: Math.floor((remaining / 1000) % 60),
+      });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [target]);
+
+  return parts;
+}
 
 export default function HeroSection() {
+  const countdown = useCountdown(eventStart);
+
   return (
     <section
       id="home"
-      className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-16 text-center"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 pt-28 pb-20 text-center"
       style={{ background: "#05080f" }}
     >
       {/* Animated background */}
@@ -42,78 +80,131 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
-        {/* Coming-soon badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs sm:text-sm text-white/70 backdrop-blur text-center">
-          <span className="inline-block h-2 w-2 rounded-full bg-[#60a5fa] animate-pulse" />
-          Coming Soon · Hosted by Kappa Theta Pi
-        </div>
+      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6">
 
         {/* Title */}
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-8xl">
           Palmetto
           <span className="text-[#60a5fa]">Hacks</span>
-          <span className="block text-3xl font-bold text-white/70 sm:text-4xl md:text-5xl mt-2">
+          <span className="mt-3 block text-sm font-semibold tracking-[0.45em] text-white/40 sm:text-base">
             2026
           </span>
         </h1>
 
+        {/* Theme */}
+        <div className="flex w-full items-center justify-center gap-3 sm:gap-5">
+          {/* Rules are dropped on mobile, where the lockup needs the full width to stay on one line. */}
+          <span
+            aria-hidden
+            className="hidden h-px bg-gradient-to-r from-transparent to-ph-yellow/60 sm:block sm:w-20"
+          />
+          <span className="flex items-center gap-2 sm:gap-3">
+            <Zap
+              aria-hidden
+              className="hero-zap h-5 w-5 shrink-0 fill-ph-yellow text-ph-yellow sm:h-7 sm:w-7"
+            />
+            {/* Negative margin cancels the trailing letter-space so the line optically centers. */}
+            <span className="hero-theme -mr-[0.15em] whitespace-nowrap text-xl font-extrabold uppercase tracking-[0.15em] sm:-mr-[0.2em] sm:text-3xl sm:tracking-[0.2em]">
+              Bring the Energy
+            </span>
+          </span>
+          <span
+            aria-hidden
+            className="hidden h-px bg-gradient-to-l from-transparent to-ph-yellow/60 sm:block sm:w-20"
+          />
+        </div>
+
         {/* Subtitle */}
         <p className="max-w-2xl text-lg text-white/60 sm:text-xl">
-          A 24-hour hackathon challenging students to build innovative technology
-          solutions. Compete, collaborate, and create at the premier student
-          hackathon in South Carolina.
+          Build something cool, enjoy free food, and win prizes. No tech-experience needed.
         </p>
 
         {/* Event meta */}
-        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
-          <div className="flex items-center gap-2">
-            <svg className="h-4 w-4 text-[#60a5fa]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <span>Saturday, October 10, 2026</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="h-4 w-4 text-[#60a5fa]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>24 Hours</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="h-4 w-4 text-[#60a5fa]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <span>University of South Carolina</span>
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-white/50">
+          {eventMeta.map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2">
+              <Icon className="h-4 w-4 text-[#60a5fa]" aria-hidden />
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Countdown */}
+        <div className="flex flex-col items-center gap-4 pt-4">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
+            Doors open in
+          </span>
+
+          <div
+            className="flex items-start gap-2 sm:gap-4"
+            role="timer"
+            aria-live="off"
+            aria-label="Time remaining until PalmettoHacks 2026 begins"
+          >
+            {(["Days", "Hours", "Minutes", "Seconds"] as const).map((unit) => (
+              <div
+                key={unit}
+                className="flex min-w-16 flex-col items-center gap-1.5 rounded-2xl border border-white/10 bg-white/5 px-3 py-4 backdrop-blur sm:min-w-24 sm:px-5 sm:py-5"
+              >
+                <span className="font-mono text-3xl font-extrabold tabular-nums text-white sm:text-5xl">
+                  {countdown ? String(countdown[unit]).padStart(2, "0") : "--"}
+                </span>
+                <span className="text-[0.65rem] uppercase tracking-widest text-white/40 sm:text-xs">
+                  {unit}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col items-center gap-3 pt-2">
-          <Button
-            size="lg"
-            disabled
-            className="bg-[#60a5fa] text-black font-semibold px-8 disabled:opacity-60"
-          >
-            Registration Opens Soon
-          </Button>
-          <p className="text-sm text-white/40">
-            Follow{" "}
-            <a
-              href="https://www.instagram.com/ktpusc"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#60a5fa] hover:underline"
-            >
-              @ktpusc
-            </a>{" "}
-            for registration updates.
-          </p>
-        </div>
+        {/* Trust strip */}
+        <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 pt-2 text-xs text-white/40 sm:text-sm">
+          {trustPoints.map((point, i) => (
+            <li key={point} className="flex items-center gap-3">
+              {i > 0 && <span aria-hidden className="h-1 w-1 rounded-full bg-ph-yellow/50" />}
+              {point}
+            </li>
+          ))}
+        </ul>
       </div>
 
-
       <style>{`
+        .hero-theme {
+          background-image: linear-gradient(
+            100deg,
+            var(--ph-yellow-deep) 0%,
+            var(--ph-yellow) 30%,
+            #fff6e0 48%,
+            var(--ph-yellow) 62%,
+            var(--ph-yellow-deep) 100%
+          );
+          background-size: 300% 100%;
+          background-position: 100% 0;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: hero-theme-sweep 5s linear infinite;
+        }
+
+        .hero-zap {
+          filter: drop-shadow(0 0 10px rgba(248, 185, 42, 0.55));
+          animation: hero-zap-pulse 5s ease-in-out infinite;
+        }
+
+        @keyframes hero-theme-sweep {
+          to { background-position: -200% 0; }
+        }
+
+        @keyframes hero-zap-pulse {
+          0%, 100% { opacity: 0.85; transform: scale(1); }
+          50%      { opacity: 1;    transform: scale(1.12); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .hero-theme { animation: none; background-position: 50% 0; }
+          .hero-zap { animation: none; }
+        }
+
         .hero-bg-anim {
           background:
             radial-gradient(900px 600px at 50% 55%, rgba(96,165,250,0.09), transparent 68%),

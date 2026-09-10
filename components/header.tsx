@@ -3,10 +3,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
+const registrationUrl = "https://forms.gle/sx6Gqe11G7ftpRHK8";
+
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Schedule", href: "#schedule" },
   { label: "Partners", href: "#partners" },
-  // { label: "Schedule", href: "#schedule" },
+  { label: "Organizers", href: "#organizers" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -14,9 +17,10 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-md bg-black/60 border-b border-white/5">
+    // Right padding keeps the Register CTA clear of the fixed MLH trust badge.
+    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-white/5 bg-black/60 py-4 pl-6 pr-6 backdrop-blur-md md:pr-44">
       {/* Logo */}
-      <a href="#" className="flex items-center gap-2 font-bold text-white text-lg">
+      <a href="#" className="flex items-center text-lg font-bold text-white">
         <span className="text-[#60a5fa]">Palmetto</span>Hacks
       </a>
 
@@ -35,12 +39,10 @@ export default function Header() {
 
       {/* CTA */}
       <div className="hidden md:flex">
-        <Button
-          size="sm"
-          disabled
-          className="bg-[#60a5fa] text-black font-semibold disabled:opacity-60"
-        >
-          Coming Soon
+        <Button asChild size="sm" className="bg-ph-yellow text-black font-semibold hover:bg-ph-yellow-bright">
+          <a href={registrationUrl} target="_blank" rel="noreferrer">
+            Register Now
+          </a>
         </Button>
       </div>
 
@@ -49,6 +51,8 @@ export default function Header() {
         className="md:hidden text-white/70 hover:text-white"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+        aria-controls="mobile-menu"
       >
         <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           {menuOpen ? (
@@ -61,7 +65,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute inset-x-0 top-full bg-black/95 border-b border-white/10 p-6 flex flex-col gap-4 md:hidden">
+        <div id="mobile-menu" className="absolute inset-x-0 top-full bg-black/95 border-b border-white/10 p-6 flex flex-col gap-4 md:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -72,12 +76,10 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <Button
-            size="sm"
-            disabled
-            className="w-fit bg-[#60a5fa] text-black font-semibold disabled:opacity-60"
-          >
-            Coming Soon
+          <Button asChild size="sm" className="w-fit bg-ph-yellow text-black font-semibold hover:bg-ph-yellow-bright">
+            <a href={registrationUrl} target="_blank" rel="noreferrer">
+              Register Now
+            </a>
           </Button>
         </div>
       )}

@@ -2,10 +2,10 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import ScheduleSection from "@/components/sections/ScheduleSection";
 import SponsorsSection from "@/components/sections/SponsorsSection";
-// import ScheduleSection from "@/components/sections/ScheduleSection";
+import OrganizersSection from "@/components/sections/OrganizersSection";
 import FaqSection from "@/components/sections/FaqSection";
-// import MLHSection from "@/components/sections/MLHSection";
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
       <main>
         <HeroSection />
         <AboutSection />
+        <ScheduleSection />
         <SponsorsSection />
-        {/* <MLHSection /> */}
-        {/* <ScheduleSection /> */}
+        <OrganizersSection />
         <FaqSection />
       </main>
       <Footer />
