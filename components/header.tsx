@@ -39,7 +39,7 @@ export default function Header() {
 
       {/* CTA */}
       <div className="hidden md:flex">
-        <Button asChild size="sm" className="bg-ph-yellow text-black font-semibold hover:bg-ph-yellow-bright">
+        <Button asChild size="sm" className="rounded-lg bg-ph-cta px-5 font-semibold text-white hover:bg-ph-cta-hover">
           <a href={registrationUrl} target="_blank" rel="noreferrer">
             Register Now
           </a>
@@ -76,7 +76,7 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <Button asChild size="sm" className="w-fit bg-ph-yellow text-black font-semibold hover:bg-ph-yellow-bright">
+          <Button asChild size="sm" className="w-fit rounded-lg bg-ph-cta px-5 font-semibold text-white hover:bg-ph-cta-hover">
             <a href={registrationUrl} target="_blank" rel="noreferrer">
               Register Now
             </a>

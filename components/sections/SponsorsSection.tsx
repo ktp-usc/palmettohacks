@@ -8,7 +8,7 @@ const presenting: Sponsor = {
   name: "Boyd Innovation Center",
   href: "https://boydinnovation.org",
   logo: "/logos/biclogo.png",
-  scale: 1.5,
+  scale: 1.45,
   // Supplied artwork is white + green, which would vanish on a light card.
   darkSurface: true,
 };
