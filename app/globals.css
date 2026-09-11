@@ -49,6 +49,8 @@
     --color-ph-yellow: var(--ph-yellow);
     --color-ph-yellow-bright: var(--ph-yellow-bright);
     --color-ph-yellow-deep: var(--ph-yellow-deep);
+    --color-ph-cta: var(--ph-cta);
+    --color-ph-cta-hover: var(--ph-cta-hover);
     --color-ph-surface: var(--ph-surface);
     --color-ph-surface-2: var(--ph-surface-2);
 }
@@ -94,6 +96,9 @@
     --ph-yellow: #f8b92a;
     --ph-yellow-bright: #fbcd63;
     --ph-yellow-deep: #d99a1b;
+    /* Primary CTA, matched to the "Hacks" blue in the wordmark. */
+    --ph-cta: var(--ph-blue);
+    --ph-cta-hover: #7cb8fb;
     --ph-surface: rgba(255, 255, 255, 0.04);
     --ph-surface-2: rgba(255, 255, 255, 0.08);
 }
