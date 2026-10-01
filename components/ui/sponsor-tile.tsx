@@ -26,6 +26,11 @@ const tiers = {
     card: "rounded-2xl p-8 sm:p-10",
     text: "text-2xl sm:text-3xl",
   },
+  premier: {
+    vars: "[--logo-h:1.65rem] sm:[--logo-h:2.35rem]",
+    card: "rounded-2xl p-7 sm:p-9",
+    text: "text-xl sm:text-2xl",
+  },
   major: {
     vars: "[--logo-h:1.4rem] sm:[--logo-h:2rem]",
     card: "rounded-2xl p-7 sm:p-8",

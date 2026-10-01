@@ -13,12 +13,25 @@ const presenting: Sponsor = {
   darkSurface: true,
 };
 
+const premier: Sponsor = {
+  name: "South Carolina Research Authority",
+  href: "https://www.scra.org",
+  logo: "/logos/SCRA.png",
+  scale: 1.6,
+};
+
 const majorSponsors: Sponsor[] = [
   { name: "QNX", href: "https://blackberry.qnx.com", logo: "/logos/qnxlogo.png", scale: 1.15 },
   {
     name: "Blue Cross Blue Shield of South Carolina",
     href: "https://www.southcarolinablues.com",
     logo: "/logos/bcbslogo.png",
+    scale: 1.85,
+  },
+  {
+    name: "Faber Entrepreneurship Center",
+    href: "https://sc.edu/study/colleges_schools/moore/research_and_centers/centers/faber_entrepreneurship_center/",
+    logo: "/logos/faberlogo.png",
     scale: 1.85,
   },
 ];
@@ -59,15 +72,20 @@ export default function SponsorsSection() {
             <SponsorTile sponsor={presenting} tier="presenting" />
           </div>
 
+          {/* Premier */}
+          <div className="mx-auto max-w-lg">
+            <SponsorTile sponsor={premier} tier="premier" />
+          </div>
+
           {/* Major */}
-          <div className="mx-auto grid max-w-3xl grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
             {majorSponsors.map((s) => (
               <SponsorTile key={s.name} sponsor={s} tier="major" />
             ))}
           </div>
 
           {/* Supporting */}
-          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
             {supportingSponsors.map((s) => (
               <SponsorTile key={s.name} sponsor={s} tier="supporting" />
             ))}
