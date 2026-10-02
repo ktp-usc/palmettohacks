@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const registrationUrl = "https://forms.gle/214JCWQZsudJLP6w9";
+const registrationUrl = "https://forms.gle/9dES5B5HN4AAgqgx7";
 
 const navLinks = [
   { label: "About", href: "#about" },
